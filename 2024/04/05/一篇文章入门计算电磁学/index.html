@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-05T09:30:58.000Z">
-<meta property="article:modified_time" content="2024-04-05T09:39:22.599Z">
+<meta property="article:modified_time" content="2024-04-05T09:55:19.658Z">
 <meta property="article:author" content="ningli">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1996,7 +1996,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712309976707),
+    lastupdate: new Date(1712310931936),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2472,49 +2472,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 electromagnetics）是笔者在研发过程中认为最复杂的物理场，难度在CFD和计算材料学之上。计算电磁学的复杂主要表现在物理场抽象，计算规模大，同时求解方法众多，涉及到大量的底层技术知识。</p>
 <p>求解的偏微分方程是<strong>麦克斯韦方程组</strong>，麦克斯韦在奥斯特，法拉利等前人试验基础上通过数学推理得到了完整的方程组，在该方程组的理论支持下，有了后来的电磁学的飞速发展。该方程组完整的描述了电，磁，材料，频率，时间之间的关系。</p>
 <p>求解电磁学可分为三类：<strong>解析法</strong>，<strong>数值法</strong>，以及<strong>半解析半数值</strong>。</p>
-<h4 id="时域方法与谱域方法">(1) 时域方法与谱域方法</h4>
+<h4 id="时域方法与谱域方法">1.时域方法与谱域方法</h4>
 <p>电磁学的数值计算方法可以分为<strong>时域方法</strong>(Time
 Domain或TD)和<strong>频域方法</strong>(Frequeney Domain或FD)两大类。</p>
-<p><strong>时域方法</strong>对Maxwell方程按时间步进后求解有关场量。最著名的时域方法是时域有限差分法(Finite
+<h5 id="时域方法">1.1 时域方法</h5>
+<p>时域方法对Maxwell方程按时间步进后求解有关场量。最著名的时域方法是时域有限差分法(Finite
 Difference Time
-Domain或FDTD)。这种方法通常适用于求解在外界激励下场的瞬态变化过程。若使用脉冲激励源，一次求解可以得到一个很宽频带范围内的响应。时域方法具有可靠的精度，更快的计算速度，并能够真实地反应电磁现象的本质，特别是在诸如短脉冲雷达目标识别、时域测量、宽带无线电通讯等研究领域更是具有不可
-估量的作用。</p>
-<p><strong>频域方法</strong>是基于时谐微分、积分方程，通过对N个均匀频率采样值的傅立叶逆变换得到所需的脉冲响应，即研究时谐(Time
+Domain或FDTD)。这种方法通常适用于求解在外界激励下场的瞬态变化过程。若使用脉冲激励源，一次求解可以得到一个很宽频带范围内的响应。时域方法具有可靠的精度，更快的计算速度，并能够真实地反应电磁现象的本质，特别是在诸如短脉冲雷达目标识别、时域测量、宽带无线电通讯等研究领域更是具有不可估量的作用。</p>
+<p>频域方法是基于时谐微分、积分方程，通过对N个均匀频率采样值的傅立叶逆变换得到所需的脉冲响应，即研究时谐(Time
 Harmonic)激励条件下经过无限长时间后的稳态场分布的情况，使用这种方法，每次计算只能求得一个频率点上的响应。过去这种方法被大量使用，多半是因为信号、雷达一般工作在窄带。当要获取复杂结构时域超宽带响应时，如果采用频域方法，则需要在很大带宽内的不同频率点上的进行多次计算，
-然后利用傅立叶变换来获得时域响应数据，计算量较大；如果直接采用时域方法，则可以一次性获得时域超宽带响应数据，大大提高计算效率。特别是时域方法还能
-直接处理非线性媒质和时变媒质问题，具有很大的优越性。时域方法使电磁场的理论与计算从处理稳态问题发展到能够处理瞬态问题，使人们处理电磁现象的范围得到了极大的扩展。</p>
-<p>频域方法可以分成基于射线的方法(Ray-based)和基于电流的方法(Current-based)。前者包括几何光学法(GO)、几何绕射理论(GTD)和一致性绕射理论(UTD)等等。后者主要包括矩量法(MoM)和物理光学法(PO)等等。</p>
+然后利用傅立叶变换来获得时域响应数据，计算量较大；如果直接采用时域方法，则可以一次性获得时域超宽带响应数据，大大提高计算效率。特别是时域方法还能直接处理非线性媒质和时变媒质问题，具有很大的优越性。时域方法使电磁场的理论与计算从处理稳态问题发展到能够处理瞬态问题，使人们处理电磁现象的范围得到了极大的扩展。</p>
+<h5 id="频域方法">1.2 频域方法</h5>
+<p>频域方法可以分成<strong>基于射线的方法</strong>(Ray-based)和<strong>基于电流的方法</strong>(Current-based)。前者包括几何光学法(GO)、几何绕射理论(GTD)和一致性绕射理论(UTD)等等。后者主要包括矩量法(MoM)和物理光学法(PO)等等。</p>
 <p>基于射线的方法通常用光的传播方式来近似电磁波的行为，考虑射向平面后的反射、经过边缘、尖劈和曲面后的绕射。当然这些方法都是高频近似方法，主要适用于那些目标表面光滑，其细节对于工作频率而言可以忽略的情况。同时，它们对于近场的模拟也不够精确。</p>
-<p>另一方面，基于电流的方法一般通过求解目标在外界激励下的感应电流进而再求解感应电流产生的散射场，而真实的场为激励场与散射场之和。基于电流的方法中最著名的是<strong>矩量法</strong>。矩量法严格建立在积分方程基础上，在数字上是精确的。其实，我们并不能判断它是一种低频方法或者是高频方法，只是矩量法所需要的存储空间和计算时间随未知元数的快速增长阻止了其对高频情况的应用，因而它只好被限定在低频至中频的应用上。物理光学法可以认为是矩量法的一种近似，它忽略了各子散射元间的相互耦合作用，这种近似对大而平滑的目标是适用的，但是目标上含有边
-缘、尖劈和拐角等外形的部件时，它就失效了。当然，对于简单形状的物体，PO法还是一个常用的方法，毕竟，它的求解过程很迅速，并且所需的存储空间也非常少(O(N))。</p>
-<h4 id="积分方程法与微分方程法">(2)积分方程法与微分方程法</h4>
-<p>从求解的方程形式又可以分成积分方程法(IF)和微分方程法(DE)。</p>
+<p>另一方面，基于电流的方法一般通过求解目标在外界激励下的感应电流进而再求解感应电流产生的散射场，而真实的场为激励场与散射场之和。基于电流的方法中最著名的是<strong>矩量法</strong>。矩量法严格建立在积分方程基础上，在数字上是精确的。其实，我们并不能判断它是一种低频方法或者是高频方法，只是矩量法所需要的存储空间和计算时间随未知元数的快速增长阻止了其对高频情况的应用，因而它只好被限定在低频至中频的应用上。<strong>物理光学法可以认为是矩量法的一种近似</strong>，它忽略了各子散射元间的相互耦合作用，这种近似对大而平滑的目标是适用的，但是目标上含有边缘、尖劈和拐角等外形的部件时，它就失效了。当然，对于简单形状的物体，PO法还是一个常用的方法，毕竟，它的求解过程很迅速，并且所需的存储空间也非常少(O(N))。</p>
+<h4 id="积分方程法与微分方程法">2.积分方程法与微分方程法</h4>
+<p>从求解的方程形式又可以分成<strong>积分方程法(IF)</strong>和<strong>微分方程法(DE)</strong>。</p>
 <p>IE法与DE法相比，特点如下：</p>
 <ul>
 <li>IE法的求解区域维数比DE法少一维，误差仅限于求解区域的边界，故精度高；</li>
-<li>IE法适宜于求解无限域问题，而DE法
-用于无限域问题的求解时则要遇到网格截断问题；</li>
+<li>IE法适宜于求解无限域问题，而DE法用于无限域问题的求解时则要遇到网格截断问题；</li>
 <li>IE法产生的矩阵是满的，阶数小，DE法所产生的矩阵是稀疏的，但阶数大；</li>
 <li>IE法难处理非均
 匀、非线性和时变媒质问题，而DE法则可以直接用于这类问题。</li>
 </ul>
-<p>因此，求解电磁场工程问题的出发点有四种方式：频域积分方程(FDIE)、频域微分方程
-(FDDE)、时域微分方程(TDDE)和时域积分方程(TDIE)。</p>
+<p>因此，求解电磁场工程问题的出发点有四种方式：<strong>频域积分方程</strong>(FDIE)、<strong>频域微分方程</strong>
+(FDDE)、<strong>时域微分方程</strong>(TDDE)和<strong>时域积分方程</strong>(TDIE)。</p>
 <p>计算电磁学也可以分成基于微分方程的方法(Differential
-Equation)和基于积分方程的方法(Integral
-Equation)两类。前者包括FDTD、时域有限体积法FVTD、频域有限差分法FDFD、有限元法FEM。在微分方程类数值方法中，其未知数理论上
-讲应定义在整个自由空间以满足电磁场在无限远处的辐射条件。但是由于计算机只有有限的存贮量，人们引入了吸收边界条件来等效无限远处的辐射条件，使未知数
-局限于有限空间内。即便如此，其所涉及的未知数数目依然庞大(相比于边界积分方程而言)。同时，由于偏微分方程的局域性，使得场在数值网格的传播过程中形
-成色散误差。所研究的区域越大，色散的积累越大。数目庞大的未知数和数值耗散问题使得微分方程类方法在分析电大尺寸目标时遇到了困难。对于FEM方法，早
-期基于节点(Node-based)的处理方式非常有可能由于插值函数的导数不满足连续性而导致不可预知的伪解问题，使得这种在工程力学中非常成功的方法
-在电磁学领域内无法大展身手，直到一种基于棱边(Edge-based)的处理方式的出现后，这个问题才得以解决。</p>
-<p>积分方程类方法主要包括各类基于边界积分方程(Boundary Integral
-Equation)与体积分方程(Volume Integral
-Equation)的方法。与微分类方法不同，其未知元通常定义在源区，比如对于完全导电体(金属)未知元仅存在于表面，显然比微分方程类方法少很多;而
-格林函数(Green’s
-Function)的引入，使得电磁场在无限远处的辐射条件己解析地包含在方程之中。场的传播过程可由格林函数精确地描述，因而不存在色散误差的积累效
-应。</p>
-<h4 id="几种主要方法之间的比较">(3) 几种主要方法之间的比较</h4>
+Equation)和基于积分方程的方法(Integral Equation)两类。</p>
+<p><strong>基于微分方程的方法</strong>包括FDTD、时域有限体积法FVTD、频域有限差分法FDFD、有限元法FEM。在微分方程类数值方法中，其未知数理论上讲应定义在整个自由空间以满足电磁场在无限远处的辐射条件。但是由于计算机只有有限的存贮量，人们引入了吸收边界条件来等效无限远处的辐射条件，使未知数局限于有限空间内。即便如此，其所涉及的未知数数目依然庞大(相比于边界积分方程而言)。同时，由于偏微分方程的局域性，使得场在数值网格的传播过程中形成色散误差。所研究的区域越大，色散的积累越大。数目庞大的未知数和数值耗散问题使得微分方程类方法在分析电大尺寸目标时遇到了困难。对于FEM方法，早期基于节点(Node-based)的处理方式非常有可能由于插值函数的导数不满足连续性而导致不可预知的伪解问题，使得这种在工程力学中非常成功的方法在电磁学领域内无法大展身手，直到一种基于棱边(Edge-based)的处理方式的出现后，这个问题才得以解决。</p>
+<p><strong>基于积分方程的方法</strong>主要包括各类基于边界积分方程(Boundary
+Integral Equation)与体积分方程(Volume Integral
+Equation)的方法。与微分类方法不同，其未知元通常定义在源区，比如对于完全导电体(金属)未知元仅存在于表面，显然比微分方程类方法少很多；而格林函数(Green’s
+Function)的引入，使得电磁场在无限远处的辐射条件己解析地包含在方程之中。场的传播过程可由格林函数精确地描述，因而不存在色散误差的积累效应。</p>
+<h4 id="几种主要方法之间的比较">3.几种主要方法之间的比较</h4>
 <p>这里对计算电磁学中几种主要的数值方法进行简单的比较，即时域有限差分法(FDTD)、有限元(FEM)、矩量法(MoM)、多极子法(MMP)、几何光学绕射法(GTD)、物理光学绕射法(PTD)和传输线法(TLM)。</p>
 <table>
 <colgroup>
@@ -2620,21 +2611,17 @@ style="text-align: center;">带宽受色散误差限制，不能解围绕散射�
 </tbody>
 </table>
 <h4 id="多种方法的混合使用">(4) 多种方法的混合使用</h4>
-<p>由于实际问题的多样性，单独使用以上介绍的方法可能并不能满足需要，比如涂敷介质的目标、印刷电路板及微
-带天线的辐射散射/EMC分析、带复杂腔体和缝隙结构的目标的散射等等。因此工程界常常将各种方法搭配起来使用，形成各种混合方法。常见的混合方法包括边
-界积分方程与体积分方程/微分方法混合、高频近似方法与低频精确方法的混合、解析方法与数值方法的混合等。</p>
+<p>由于实际问题的多样性，单独使用以上介绍的方法可能并不能满足需要，比如<strong>涂敷介质的目标</strong>、印刷电路板及微带天线的辐射散射/EMC分析、<strong>带复杂腔体和缝隙结构的目标的散射</strong>等等。因此工程界常常将各种方法搭配起来使用，形成各种混合方法。</p>
+<p>常见的混合方法包括边界积分方程与体积分方程/微分方法混合、高频近似方法与低频精确方法的混合、解析方法与数值方法的混合等。</p>
 <p>高频方法与低频方法的混合技术一
-般针对含有复杂细节的电大尺寸目标而提出的。由于完全使用低频的精确方法来处理电大尺寸部分往往超出了目前计算机的能力，而单纯使用高频方法又得不到足够
-精确的近场，所以这种分而治之的折中方案就出现了。常用的混合方法包括弹跳射线法/矩量法混合(SBR/MoM)、物理绕射理论/矩量法混合(PTD
-/MoM)、几何绕射理论/矩量法混合(GTD/MOM)等等。当然，引入了高频近似，赢得了速度和空间，同时在一定程度上也损失了精度。</p>
-<p>除了上述几种混合方法之外，将解析方法和数值方法混合也是一种非常有用的方法。比如二维非均匀介质电磁问题中将二维的数值计算转化为径向本征模式展开与纵向
-的解析递推的数值模式匹配法(NMM)以及对于n维偏微分方程先使用(n一l)维数值离散转化为常微分方程后再用解析方法求其通解的直线法都是很好的例子。</p>
+般针对含有复杂细节的电大尺寸目标而提出的。由于完全使用低频的精确方法来处理电大尺寸部分往往超出了目前计算机的能力，而单纯使用高频方法又得不到足够精确的近场，所以这种分而治之的折中方案就出现了。常用的混合方法包括弹跳射线法/矩量法混合(SBR/MoM)、物理绕射理论/矩量法混合(PTD/MoM)、几何绕射理论/矩量法混合(GTD/MOM)等等。当然，引入了高频近似，赢得了速度和空间，同时在一定程度上也损失了精度。</p>
+<p>除了上述几种混合方法之外，将解析方法和数值方法混合也是一种非常有用的方法。比如二维非均匀介质电磁问题中将二维的数值计算转化为径向本征模式展开与纵向的解析递推的数值模式匹配法(NMM)以及对于n维偏微分方程先使用(n一l)维数值离散转化为常微分方程后再用解析方法求其通解的直线法都是很好的例子。</p>
 <h4 id="算法的快速求解">(5) 算法的快速求解</h4>
-<p>快速算法：快速算法是为了解决矩量法求解过程中存储量和计算量过大的问题而出现的。近年来，许多
-学者致力于精确方法的快速求解以满足工程中日益增长的对电大尺寸复杂物体精确模拟之需要。由于矩量法产生的是一个满阵，存储量为O(
-N2)，采用直接求解的计算复杂度为<span
+<p>快速算法：快速算法是为了解决矩量法求解过程中存储量和计算量过大的问题而出现的。近年来，许多学者致力于精确方法的快速求解以满足工程中日益增长的对电大尺寸复杂物体精确模拟之需要。由于矩量法产生的是一个满阵，存储量为<span
+class="math inline">\(O(N^2)\)</span>，采用直接求解的计算复杂度为<span
 class="math inline">\(O(N^3)\)</span>，采用迭代求解的计算复杂度为<span
-class="math inline">\(O(N^2)\)</span>，当未知量N增大的时候，存储量和计算量都会快速增加，这极大的限制了其求解能力。而某些基于矩量法的快速算法，如多层快速多极子算法，可以成功的将存储量和计算复杂度分别降到O(N)和O(NlogN)量级，极大的扩大了其求解能力。这些方法主要有基于分组思想的快速多极子方法（FMM），多层快速多极子算法（MLFMA），快速非均匀平面波
+class="math inline">\(O(N^2)\)</span>，当未知量N增大的时候，存储量和计算量都会快速增加，这极大的限制了其求解能力。而某些基于矩量法的快速算法，如多层快速多极子算法，可以成功的将存储量和计算复杂度分别降到O(N)和O(NlogN)量级，极大的扩大了其求解能力。</p>
+<p>这些方法主要有基于分组思想的快速多极子方法（FMM），多层快速多极子算法（MLFMA），快速非均匀平面波
 算法（FIPWA），自适应积分方法（AIM），共轭梯度快速傅立叶变换（CG-FFT）等方法。</p>
 
   </div>
@@ -2660,7 +2647,7 @@ class="math inline">\(O(N^2)\)</span>，当未知量N增大的时候，存储量
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-05T17:39:22+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-05T17:55:19+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年4月5日</p>
@@ -2810,7 +2797,7 @@ class="math inline">\(O(N^2)\)</span>，当未知量N增大的时候，存储量
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E6%96%B9%E6%B3%95%E4%B8%8E%E8%B0%B1%E5%9F%9F%E6%96%B9%E6%B3%95"><span class="toc-text">(1) 时域方法与谱域方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E6%96%B9%E7%A8%8B%E6%B3%95%E4%B8%8E%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%B3%95"><span class="toc-text">(2)积分方程法与微分方程法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%A0%E7%A7%8D%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">(3) 几种主要方法之间的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-text">(4) 多种方法的混合使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E5%BF%AB%E9%80%9F%E6%B1%82%E8%A7%A3"><span class="toc-text">(5) 算法的快速求解</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E6%96%B9%E6%B3%95%E4%B8%8E%E8%B0%B1%E5%9F%9F%E6%96%B9%E6%B3%95"><span class="toc-text">1.时域方法与谱域方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%97%B6%E5%9F%9F%E6%96%B9%E6%B3%95"><span class="toc-text">1.1 时域方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A2%91%E5%9F%9F%E6%96%B9%E6%B3%95"><span class="toc-text">1.2 频域方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E6%96%B9%E7%A8%8B%E6%B3%95%E4%B8%8E%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%B3%95"><span class="toc-text">2.积分方程法与微分方程法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%A0%E7%A7%8D%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">3.几种主要方法之间的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%A7%8D%E6%96%B9%E6%B3%95%E7%9A%84%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-text">(4) 多种方法的混合使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E5%BF%AB%E9%80%9F%E6%B1%82%E8%A7%A3"><span class="toc-text">(5) 算法的快速求解</span></a></li></ol>
   </div>
 </section>
 
@@ -3186,6 +3173,60 @@ target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-
 
 
 
+        <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = "https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  }
+</script>
+
+
+
 
 <script>
   function listenSidebarTOC() {
@@ -3320,7 +3361,7 @@ target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"NingLi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/research/","name":"research"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/05/一篇文章入门计算电磁学/","name":"一篇文章入门计算电磁学"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"NingLi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"一篇文章入门计算电磁学","description":"","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/05/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E7%94%B5%E7%A3%81%E5%AD%A6/"},"author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"NingLi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/05/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E7%94%B5%E7%A3%81%E5%AD%A6/","wordCount":0,"datePublished":"2024-04-05T09:30:58.000Z","dateModified":"2024-04-05T09:39:22.599Z","articleSection":"research","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"NingLi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/research/","name":"research"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/05/一篇文章入门计算电磁学/","name":"一篇文章入门计算电磁学"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"NingLi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"一篇文章入门计算电磁学","description":"","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/05/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E7%94%B5%E7%A3%81%E5%AD%A6/"},"author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"NingLi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/05/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E7%94%B5%E7%A3%81%E5%AD%A6/","wordCount":0,"datePublished":"2024-04-05T09:30:58.000Z","dateModified":"2024-04-05T09:55:19.658Z","articleSection":"research","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
