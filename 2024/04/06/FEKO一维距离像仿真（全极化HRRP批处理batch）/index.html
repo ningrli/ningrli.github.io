@@ -5,8 +5,8 @@
   <meta name="Volantis" content="6.0.0-alpha.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/categories/research/"/>
+  
+  <link rel="canonical" href="http://example.com/2024/04/06/feko一维距离像仿真（全极化hrrp批处理batch）/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,16 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>分类：research - NingLi's Blog</title>
-  <meta name="keywords" content="null">
+  <title>FEKO一维距离像仿真（全极化HRRP批处理batch） - NingLi's Blog</title>
+  <meta name="keywords" content="距离像,Feko,null">
   <meta desc name="description" content="NingLi's Blog - ningli - NingLi's Blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="NingLi&#39;s Blog">
-<meta property="og:url" content="http://example.com/categories/research/index.html">
+  <meta name="description" content="通过FEKO仿真，采用步进频方式获取目标全极化雷达回波，对HH(水平水平)、HV（水平垂直）、VV（垂直垂直）、VH（垂直水平）四种极化方式进行压缩，获取目标不同极化情况下的高分辨一维距离像，并对不同极化情况下的信号能量峰值进行归一化处理，比较不同极化情况下的成像性能。   图1 角度设置示意图  HRRP仿真示意图   图2 雷达回波       图3 全极化情况下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FEKO一维距离像仿真（全极化HRRP批处理batch）">
+<meta property="og:url" content="http://example.com/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/index.html">
 <meta property="og:site_name" content="NingLi&#39;s Blog">
+<meta property="og:description" content="通过FEKO仿真，采用步进频方式获取目标全极化雷达回波，对HH(水平水平)、HV（水平垂直）、VV（垂直垂直）、VH（垂直水平）四种极化方式进行压缩，获取目标不同极化情况下的高分辨一维距离像，并对不同极化情况下的信号能量峰值进行归一化处理，比较不同极化情况下的成像性能。   图1 角度设置示意图  HRRP仿真示意图   图2 雷达回波       图3 全极化情况下">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-04-06T12:32:38.000Z">
+<meta property="article:modified_time" content="2024-04-06T12:38:41.900Z">
 <meta property="article:author" content="ningli">
+<meta property="article:tag" content="距离像">
+<meta property="article:tag" content="Feko">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1984,7 +1990,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2319,7 +2325,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-      <div class="cover-wrapper  search" id='half'>
+      <div class="cover-wrapper post search" id='half'>
         
   <div class='cover-bg lazyload placeholder' data-bg="https://pic.imgdb.cn/item/65fbf2cf9f345e8d03ba5281.jpg"></div>
 
@@ -2374,42 +2380,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/FEKO一维距离像仿真（全极化HRRP批处理batch）/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="NingLi's Blog">
@@ -2419,767 +2391,255 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         FEKO一维距离像仿真（全极化HRRP批处理batch）
-      </a>
-    </h2>
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg" class="lazyload" data-srcset="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">NingLi</p>
+  </a>
+</div>
+
+          
+        
+          
+            
   
-  <div class='md article-desc' itemprop="articleBody">
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/research/">research</a>
     
-      
-        通过FEKO仿真，采用步进频方式获取目标全极化雷达回波，对HH(水平水平)、HV（水平垂直）、VV（垂直垂直）、VH（垂直水平）四种极化方式进行压缩，获取目标不同极化情况下的高分辨一维距离像，并对不同极化情况下的信号能量峰值进行归一化处理，比较不同极化情况下的成像性能。
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
+      </span>
+    
+  </div>
+  
 
 
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-04-06T20:32:38+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2024年4月6日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>通过FEKO仿真，采用步进频方式获取目标全极化雷达回波，对HH(水平水平)、HV（水平垂直）、VV（垂直垂直）、VH（垂直水平）四种极化方式进行压缩，获取目标不同极化情况下的高分辨一维距离像，并对不同极化情况下的信号能量峰值进行归一化处理，比较不同极化情况下的成像性能。</p>
+<p><img src="https://pic.imgdb.cn/item/6611415868eb9357133a3d7a.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/6611415868eb9357133a3d7a.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="zoom:67%;" /></p>
+<center>
 图1 角度设置示意图
-
-HRRP仿真示意图
-
-
+</center>
+<h4 id="hrrp仿真示意图">HRRP仿真示意图</h4>
+<p><img src="https://pic.imgdb.cn/item/6611415868eb9357133a3db1.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/6611415868eb9357133a3db1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="zoom:80%;" /></p>
+<center>
 图2 雷达回波
+</center>
+<p><img
+src="https://pic.imgdb.cn/item/6611415968eb9357133a3ddc.png" /></p>
+<p><img
+src="https://pic.imgdb.cn/item/6611415968eb9357133a3e07.png" /></p>
+<p><img
+src="https://pic.imgdb.cn/item/6611415968eb9357133a3e35.png" /></p>
+<p><img
+src="https://pic.imgdb.cn/item/6611417868eb9357133a5cd6.png" /></p>
+<center>
+图3 全极化情况下的一维距离像
+</center>
+<p><strong>结论</strong>：在俯仰角为60度的情况下，舰船（150）在雷达视线LOS的投影长度为：150*cos(30度)≈133m。四种极化的估计结果均接近目标真值。</p>
+<p>部分MATLAB代码如下：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%% 数据与结果显示</span></span><br><span class="line"><span class="comment">% 绘制RCS电场值以及四种极化下的数据</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:seq_azi_all</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">j</span> = <span class="number">1</span>:seq_ele_all</span><br><span class="line">        k = <span class="number">1</span>;  <span class="comment">%文件下的第一个文本（默认发射是水平极化）</span></span><br><span class="line">        <span class="built_in">figure</span>(<span class="string">&#x27;color&#x27;</span>,[<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>])</span><br><span class="line">        DATA_now = EHH_r(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k) +EHV_r(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k) + <span class="number">1</span><span class="built_in">j</span>*EHH_i(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k) + <span class="number">1</span><span class="built_in">j</span>*EHV_i(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k);  <span class="comment">% 抽取的不同角度下的回波数据</span></span><br><span class="line">        <span class="built_in">plot</span>(<span class="built_in">linspace</span>(<span class="number">0.95</span>,<span class="number">1.05</span>,fre_Num),<span class="built_in">abs</span>(DATA_now(:)),<span class="string">&#x27;b--o&#x27;</span>);</span><br><span class="line">        grid on</span><br><span class="line">        box on</span><br><span class="line">        xlabel(<span class="string">&#x27;频点（GHz）&#x27;</span>);</span><br><span class="line">        ylabel(<span class="string">&#x27;回波电场值&#x27;</span>);</span><br><span class="line">        title([<span class="string">&#x27;舰船目标雷达回波电场值&#x27;</span>,<span class="string">&#x27;  方位角:&#x27;</span>,num2str(Azi_matrix(<span class="built_in">i</span>)),<span class="string">&#x27;  俯仰角:&#x27;</span>,num2str(Ele_matrix(<span class="built_in">j</span>)),]);</span><br><span class="line">        <span class="comment">% 进行数据处理</span></span><br><span class="line">        k = <span class="number">1</span>;  <span class="comment">%文件下的第一个文本（默认发射是水平极化）</span></span><br><span class="line">        DATA_HH = EHH_r(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k) + <span class="number">1</span><span class="built_in">j</span>*EHH_i(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k);  <span class="comment">% 抽取的HH的回波数据</span></span><br><span class="line">        HRRP_HH = ifftshift(ifft(DATA_HH(:),<span class="built_in">floor</span>(upsample * fre_Num)));  <span class="comment">% 做更多点数的IFFT</span></span><br><span class="line">        DATA_HV = EHV_r(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k) + <span class="number">1</span><span class="built_in">j</span>*EHV_i(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k);  <span class="comment">% 抽取的HH的回波数据</span></span><br><span class="line">        HRRP_HV = ifftshift(ifft(DATA_HV(:),<span class="built_in">floor</span>(upsample * fre_Num)));  <span class="comment">% 做更多点数的IFFT</span></span><br><span class="line">        k = <span class="number">2</span>;  <span class="comment">%文件下的第2个文本（默认发射是垂直极化）</span></span><br><span class="line">        DATA_VV = EVV_r(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k) + <span class="number">1</span><span class="built_in">j</span>*EVV_i(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k);  <span class="comment">% 抽取的VV的回波数据</span></span><br><span class="line">        HRRP_VV = ifftshift(ifft(DATA_VV(:),<span class="built_in">floor</span>(upsample * fre_Num)));  <span class="comment">% 做更多点数的IFFT</span></span><br><span class="line">        DATA_VH = EVH_r(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k) + <span class="number">1</span><span class="built_in">j</span>*EVH_i(<span class="built_in">j</span>,<span class="built_in">i</span>,:,k);  <span class="comment">% 抽取的VH的回波数据</span></span><br><span class="line">        HRRP_VH = ifftshift(ifft(DATA_VH(:),<span class="built_in">floor</span>(upsample * fre_Num)));  <span class="comment">% 做更多点数的IFFT</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment">% 计算所有极化情况下的能量最大值，用来归一化能量</span></span><br><span class="line">        Power_temp = <span class="built_in">max</span>(<span class="built_in">abs</span>([HRRP_HH,HRRP_HV,HRRP_VV,HRRP_VH]));</span><br><span class="line">        Power_max = <span class="built_in">max</span>(Power_temp);</span><br><span class="line"> </span><br><span class="line">        <span class="built_in">figure</span>(<span class="string">&#x27;color&#x27;</span>,[<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>])</span><br><span class="line">        subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">plot</span>(rao_r*<span class="built_in">linspace</span>(<span class="number">1</span>,NUM,NUM),<span class="built_in">abs</span>(HRRP_HH)./Power_max);</span><br><span class="line">        grid on</span><br><span class="line">        box on</span><br><span class="line">        xlabel(<span class="string">&#x27;距离（m）&#x27;</span>);</span><br><span class="line">        ylabel(<span class="string">&#x27;归一化幅度&#x27;</span>);</span><br><span class="line">        title([<span class="string">&#x27;HH极化下的HRRP&#x27;</span>,<span class="string">&#x27;  方位角:&#x27;</span>,num2str(Azi_matrix(<span class="built_in">i</span>)),<span class="string">&#x27;  俯仰角:&#x27;</span>,num2str(Ele_matrix(<span class="built_in">j</span>)),]);</span><br><span class="line">        subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">        <span class="built_in">plot</span>(rao_r*<span class="built_in">linspace</span>(<span class="number">1</span>,NUM,NUM),<span class="built_in">abs</span>(HRRP_HV)./Power_max);</span><br><span class="line">        grid on</span><br><span class="line">        box on</span><br><span class="line">        xlabel(<span class="string">&#x27;距离（m）&#x27;</span>);</span><br><span class="line">        ylabel(<span class="string">&#x27;归一化幅度&#x27;</span>);</span><br><span class="line">        title([<span class="string">&#x27;HV极化下的HRRP&#x27;</span>,<span class="string">&#x27;  方位角:&#x27;</span>,num2str(Azi_matrix(<span class="built_in">i</span>)),<span class="string">&#x27;  俯仰角:&#x27;</span>,num2str(Ele_matrix(<span class="built_in">j</span>)),]);</span><br><span class="line">        subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">        <span class="built_in">plot</span>(rao_r*<span class="built_in">linspace</span>(<span class="number">1</span>,NUM,NUM),<span class="built_in">abs</span>(HRRP_VV)./Power_max);</span><br><span class="line">        grid on</span><br><span class="line">        box on</span><br><span class="line">        xlabel(<span class="string">&#x27;距离（m）&#x27;</span>);</span><br><span class="line">        ylabel(<span class="string">&#x27;归一化幅度&#x27;</span>);</span><br><span class="line">        title([<span class="string">&#x27;VV极化下的HRRP&#x27;</span>,<span class="string">&#x27;  方位角:&#x27;</span>,num2str(Azi_matrix(<span class="built_in">i</span>)),<span class="string">&#x27;  俯仰角:&#x27;</span>,num2str(Ele_matrix(<span class="built_in">j</span>)),]);</span><br><span class="line">        subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line">        <span class="built_in">plot</span>(rao_r*<span class="built_in">linspace</span>(<span class="number">1</span>,NUM,NUM),<span class="built_in">abs</span>(HRRP_VH)./Power_max);</span><br><span class="line">        grid on</span><br><span class="line">        box on</span><br><span class="line">        xlabel(<span class="string">&#x27;距离（m）&#x27;</span>);</span><br><span class="line">        ylabel(<span class="string">&#x27;归一化幅度&#x27;</span>);</span><br><span class="line">        title([<span class="string">&#x27;VH极化下的HRRP&#x27;</span>,<span class="string">&#x27;  方位角:&#x27;</span>,num2str(Azi_matrix(<span class="built_in">i</span>)),<span class="string">&#x27;  俯仰角:&#x27;</span>,num2str(Ele_matrix(<span class="built_in">j</span>)),]);</span><br><span class="line">        set(gcf,<span class="string">&#x27;position&#x27;</span>,[<span class="number">200</span> <span class="number">200</span> <span class="number">1360</span> <span class="number">720</span>]);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-图3 全极化...
-      
-    
   </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-06T20:32:38+08:00">2024-04-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-06T20:38:41+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年4月6日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/基于FEKO的目标高分辨二维ISAR像仿真与尺寸估计-步进频信号/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
+          
   
   
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%B7%9D%E7%A6%BB%E5%83%8F/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>距离像</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Feko/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Feko</p></a></div>
+  <span hidden itemprop="keywords">距离像 Feko</span>
+  
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/&title=FEKO一维距离像仿真（全极化HRRP批处理batch） - NingLi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/&title=FEKO一维距离像仿真（全极化HRRP批处理batch） - NingLi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/&title=FEKO一维距离像仿真（全极化HRRP批处理batch） - NingLi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/04/06/%E5%9F%BA%E4%BA%8EFEKO%E7%9A%84%E7%9B%AE%E6%A0%87%E9%AB%98%E5%88%86%E8%BE%A8%E4%BA%8C%E7%BB%B4ISAR%E5%83%8F%E4%BB%BF%E7%9C%9F%E4%B8%8E%E5%B0%BA%E5%AF%B8%E4%BC%B0%E8%AE%A1-%E6%AD%A5%E8%BF%9B%E9%A2%91%E4%BF%A1%E5%8F%B7/'>
+          <p class='title'>基于FEKO的目标高分辨二维ISAR像仿真与尺寸估计(步进频信号)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>ISAR成像是通过利用目标—雷达视线之间相对运动而张成的观测孔径来反演目标的结构信息。其距离分辨率主要由雷达发射信号带宽决定，通过发射大带宽信号，在距离维通过匹配滤波与脉冲压缩的信号处理手段来获...</p>
+        </a>
+      
+    </div>
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/06/%E5%9F%BA%E4%BA%8EFEKO%E7%9A%84%E7%9B%AE%E6%A0%87%E9%AB%98%E5%88%86%E8%BE%A8%E4%BA%8C%E7%BB%B4ISAR%E5%83%8F%E4%BB%BF%E7%9C%9F%E4%B8%8E%E5%B0%BA%E5%AF%B8%E4%BC%B0%E8%AE%A1-%E6%AD%A5%E8%BF%9B%E9%A2%91%E4%BF%A1%E5%8F%B7/"  itemprop="url">
-        基于FEKO的目标高分辨二维ISAR像仿真与尺寸估计(步进频信号)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        ISAR成像是通过利用目标—雷达视线之间相对运动而张成的观测孔径来反演目标的结构信息。其距离分辨率主要由雷达发射信号带宽决定，通过发射大带宽信号，在距离维通过匹配滤波与脉冲压缩的信号处理手段来获取距离上的高分辨能力。而方位维分辨则是由目标与雷达视线之间的相对转动产生的多普勒来区分不同的散射结构，通常为获得较高的方位维分辨率，需要在保证目标散射点相对结构基本不变的前提下，使得雷达对目标在较长的...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-06T19:59:34+08:00">2024-04-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/06/%E5%9F%BA%E4%BA%8EFEKO%E7%9A%84%E7%9B%AE%E6%A0%87%E9%AB%98%E5%88%86%E8%BE%A8%E4%BA%8C%E7%BB%B4ISAR%E5%83%8F%E4%BB%BF%E7%9C%9F%E4%B8%8E%E5%B0%BA%E5%AF%B8%E4%BC%B0%E8%AE%A1-%E6%AD%A5%E8%BF%9B%E9%A2%91%E4%BF%A1%E5%8F%B7/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/基于FEKO的目标高分辨一维距离像仿真与目标尺寸估计/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/06/%E5%9F%BA%E4%BA%8EFEKO%E7%9A%84%E7%9B%AE%E6%A0%87%E9%AB%98%E5%88%86%E8%BE%A8%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%E4%B8%8E%E7%9B%AE%E6%A0%87%E5%B0%BA%E5%AF%B8%E4%BC%B0%E8%AE%A1/"  itemprop="url">
-        基于FEKO的目标高分辨一维距离像仿真与目标尺寸估计
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        现代雷达能够通过发射步进频信号实现对目标散射点结构的感知与判定，该博客基于FEKO软件仿真，获取目标的回波数据（电场分量），进而生成目标的高分辨一维距离像（High
-Resolution Range Profile,
-HRRP），能够较为方便地得到目标各方向尺寸信息。
-雷达高分辨一维距离像能反映目标精细的结构特征，能够刻画目标基础特性。因此，目标HRRP对于目标识别具有重要的意义。对于...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-06T19:24:08+08:00">2024-04-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/06/%E5%9F%BA%E4%BA%8EFEKO%E7%9A%84%E7%9B%AE%E6%A0%87%E9%AB%98%E5%88%86%E8%BE%A8%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%E4%B8%8E%E7%9B%AE%E6%A0%87%E5%B0%BA%E5%AF%B8%E4%BC%B0%E8%AE%A1/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/Antenna-Toolbox/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/06/Antenna-Toolbox/"  itemprop="url">
-        Antenna Toolbox
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Analysis, Benchmarking,
-and Verification
-Antenna and array analysis, meshing, solvers, comparison of Antenna
-Toolbox™ simulations with measured results
-Solvers
-MoM, physical optics, hybrid MoM...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-06T16:56:21+08:00">2024-04-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/06/Antenna-Toolbox/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/宝藏级开源求解器项目列表/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/06/%E5%AE%9D%E8%97%8F%E7%BA%A7%E5%BC%80%E6%BA%90%E6%B1%82%E8%A7%A3%E5%99%A8%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8/"  itemprop="url">
-        宝藏级开源求解器项目列表
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-开源的FEM求解器
-一份是gitlab的链接：
-https://gitlab.com/pointhi/kicad/-/wikis/SI-and-PI
-在kicad的官方论坛上，一些开发者在讨论如何将SI/PI仿真分析功能加入到kicad中，然后他们计划在kicad
-7的某个版本中加入相关的仿真功能，目前正在筛选一些可用的开源求解器项目，然后整理了这份列表。
-这份列表里列出了一些...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-06T11:43:58+08:00">2024-04-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/06/%E5%AE%9D%E8%97%8F%E7%BA%A7%E5%BC%80%E6%BA%90%E6%B1%82%E8%A7%A3%E5%99%A8%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/05/一篇文章入门计算电磁学/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/05/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E7%94%B5%E7%A3%81%E5%AD%A6/"  itemprop="url">
-        一篇文章入门计算电磁学
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        计算电磁学CEM（computational
-electromagnetics）是笔者在研发过程中认为最复杂的物理场，难度在CFD和计算材料学之上。计算电磁学的复杂主要表现在物理场抽象，计算规模大，同时求解方法众多，涉及到大量的底层技术知识。
-求解的偏微分方程是麦克斯韦方程组，麦克斯韦在奥斯特，法拉利等前人试验基础上通过数学推理得到了完整的方程组，在该方程组的理论支持下，有了后来的电磁学...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-05T17:30:58+08:00">2024-04-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/05/%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E7%94%B5%E7%A3%81%E5%AD%A6/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/22/差分进化-DE-算法/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/22/%E5%B7%AE%E5%88%86%E8%BF%9B%E5%8C%96-DE-%E7%AE%97%E6%B3%95/"  itemprop="url">
-        差分进化(DE)算法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        差分进化算法(differential evolution,
-DE)是一类基于群体的自适应全局优化算法，有较强的鲁棒性和全局寻优能力，主要用于求解实数优化问题。它从数学角度看是一种随机搜索算法，从工程角度看是一种自适应的迭代寻优过程。差分进化算法凭借其独特的优势在数据挖掘、模式识别、电磁学等领域被广泛应用。
-算法流程
-差分进化算法采用实数编码，基于差分的简单变异操作和“一对一”的竞争生...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-22T16:15:49+08:00">2024-03-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/22/%E5%B7%AE%E5%88%86%E8%BF%9B%E5%8C%96-DE-%E7%AE%97%E6%B3%95/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/22/Hough变换/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/22/Hough%E5%8F%98%E6%8D%A2/"  itemprop="url">
-        Hough变换
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        通过Hough变换在二值图像中检测直线需要3个步骤：
-（1）利用hough()函数执行霍夫变换，得到霍夫矩阵；
-（2）利用houghpeaks()函数在霍夫矩阵中寻找峰值点；
-（3）利用houghlines()函数在之前2步结果的基础上得到原二值图像中的直线信息
-1．霍夫变换
-在MATLAB中，hough函数用于执行霍夫变换，该函数的调用方法如下：
-1[H, theta, rho...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-22T16:00:06+08:00">2024-03-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/22/Hough%E5%8F%98%E6%8D%A2/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/22/MSTAR数据集/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/22/MSTAR%E6%95%B0%E6%8D%AE%E9%9B%86/"  itemprop="url">
-        MSTAR数据集
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        MSTAR数据集
-MSTAR 实测数据采取 HH
-极化方式和聚束式成像模式，分辨率为0.3m×0.3m，覆盖的方位角范围为
-0°~360°，共有 10 类目标类型，分别为 BMP2、
-BTR70、T72、BTR60、2S1、BRDM2、D7、T62、ZIL131、 ZSU234。在 SOC
-配置条件下采用 17° 俯仰角下的 数据为训练集，15°
-俯仰角下的数据为测试集。10类目...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-22T15:48:38+08:00">2024-03-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/22/MSTAR%E6%95%B0%E6%8D%AE%E9%9B%86/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/21/雷达电波波段及其特性/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NingLi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="NingLi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/21/%E9%9B%B7%E8%BE%BE%E7%94%B5%E6%B3%A2%E6%B3%A2%E6%AE%B5%E5%8F%8A%E5%85%B6%E7%89%B9%E6%80%A7/"  itemprop="url">
-        雷达电波波段及其特性
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1.无限电波频谱
-无线电波频谱的划分与命名：
-
-表1 无线电波频谱的划分与命名
+  </article>
 
 
-2.雷达电波波段划分
-本质上说，雷达频率使用没有根本的限制。任何装置，不论频率如何，只要是通过辐射电磁能量和利用从目标散射回波对目标探测和定位，都属于雷达工作频率的范畴。雷达常采用的工作波长从大于100m(短波)至小于\(10^{-7}\)m(紫外线).
-常见的雷达波段有一套字母代号，如下表所...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/65fbf2f79f345e8d03bb13c8.jpg">
-            <meta itemprop="name" content="NingLi">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-21T20:36:09+08:00">2024-03-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/research/">research</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/research/" itemprop="url"><span itemprop="name">research</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/21/%E9%9B%B7%E8%BE%BE%E7%94%B5%E6%B3%A2%E6%B3%A2%E6%AE%B5%E5%8F%8A%E5%85%B6%E7%89%B9%E6%80%A7/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
-    
-  
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3188,192 +2648,31 @@ BTR70、T72、BTR60、2S1、BRDM2、D7、T62、ZIL131、 ZSU234。在 SOC
     
     
       
-<section class="widget blogger desktop mobile ">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://pic.imgdb.cn/item/65fbdcc19f345e8d0351e473.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">NingLi's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:#ningli316@163.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/ningrli/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/research-grocery/" href="/categories/research-grocery/"
-            active-action="action-categoriesresearch-grocery"
-            ><div class='name'>research grocery</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/research/" href="/categories/research/"
-            active-action="action-categoriesresearch"
-            ><div class='name'>research</div><div class='badge'>(10)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Feko/" style="font-size: 14px; color: #999">Feko</a> <a href="/tags/ISAR/" style="font-size: 14px; color: #999">ISAR</a> <a href="/tags/%E8%B7%9D%E7%A6%BB%E5%83%8F/" style="font-size: 24px; color: #555">距离像</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>21 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2024-04-06 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop mobile">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/"><div class="item"><time>2024-04-06</time><span>research</span></div><span>FEKO一维距离像仿真（全极化HRRP批处理batch）</span></a></li><li><a class="widget-last" href="/2024/04/06/%E5%9F%BA%E4%BA%8EFEKO%E7%9A%84%E7%9B%AE%E6%A0%87%E9%AB%98%E5%88%86%E8%BE%A8%E4%BA%8C%E7%BB%B4ISAR%E5%83%8F%E4%BB%BF%E7%9C%9F%E4%B8%8E%E5%B0%BA%E5%AF%B8%E4%BC%B0%E8%AE%A1-%E6%AD%A5%E8%BF%9B%E9%A2%91%E4%BF%A1%E5%8F%B7/"><div class="item"><time>2024-04-06</time><span>research</span></div><span>基于FEKO的目标高分辨二维ISAR像仿真与尺寸估计(步进频信号)</span></a></li><li><a class="widget-last" href="/2024/04/06/%E5%9F%BA%E4%BA%8EFEKO%E7%9A%84%E7%9B%AE%E6%A0%87%E9%AB%98%E5%88%86%E8%BE%A8%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%E4%B8%8E%E7%9B%AE%E6%A0%87%E5%B0%BA%E5%AF%B8%E4%BC%B0%E8%AE%A1/"><div class="item"><time>2024-04-06</time><span>research</span></div><span>基于FEKO的目标高分辨一维距离像仿真与目标尺寸估计</span></a></li><li><a class="widget-last" href="/2024/03/22/%E6%B8%B2%E6%9F%93%E5%85%AC%E5%BC%8F%EF%BC%88MathJax%EF%BC%89/"><div class="item"><time>2024-04-06</time></div><span>渲染公式（MathJax）</span></a></li><li><a class="widget-last" href="/2024/04/06/Antenna-Toolbox/"><div class="item"><time>2024-04-06</time><span>research</span></div><span>Antenna Toolbox</span></a></li></ul>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#hrrp%E4%BB%BF%E7%9C%9F%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="toc-text">HRRP仿真示意图</span></a></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -3381,6 +2680,9 @@ BTR70、T72、BTR60、2S1、BRDM2、D7、T62、ZIL131、 ZSU234。在 SOC
   
   <!-- Custom Files side end -->
 </aside>
+
+
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> -->
 
 
         </div>
@@ -3876,7 +3178,7 @@ target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"NingLi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/research/","name":"research"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"NingLi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"NingLi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"NingLi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/research/","name":"research"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/06/FEKO一维距离像仿真（全极化HRRP批处理batch）/","name":"FEKO一维距离像仿真（全极化HRRP批处理batch）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"NingLi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"FEKO一维距离像仿真（全极化HRRP批处理batch）","description":"","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/"},"author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"NingLi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/06/FEKO%E4%B8%80%E7%BB%B4%E8%B7%9D%E7%A6%BB%E5%83%8F%E4%BB%BF%E7%9C%9F%EF%BC%88%E5%85%A8%E6%9E%81%E5%8C%96HRRP%E6%89%B9%E5%A4%84%E7%90%86batch%EF%BC%89/","wordCount":0,"datePublished":"2024-04-06T12:32:38.000Z","dateModified":"2024-04-06T12:38:41.900Z","articleSection":"research","keywords":"距离像,Feko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
