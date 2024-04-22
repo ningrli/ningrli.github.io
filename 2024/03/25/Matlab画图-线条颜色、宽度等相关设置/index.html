@@ -35,7 +35,7 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>Matlab画图 线条颜色、宽度等相关设置 - NingLi's Blog</title>
-  <meta name="keywords" content="null">
+  <meta name="keywords" content="matlab,null">
   <meta desc name="description" content="NingLi's Blog - ningli - NingLi's Blog">
   <meta name="description" content="线条的属性有： Color —— 颜色、LineWidth —— 线条宽度、LineStyle —— 线型、LineJoin —— 线条边角的样式、 AlignVertexCenters —— 锐化垂直线和水平线 线条属性的默认值为： 1([0,0,0], &#x27;-&#x27;, &#x27;0.5&#x27;, &#x27;round&#x27;,&#x27;off&#x27;)">
 <meta property="og:type" content="article">
@@ -46,8 +46,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-25T08:46:22.000Z">
-<meta property="article:modified_time" content="2024-04-13T09:16:30.803Z">
+<meta property="article:modified_time" content="2024-04-22T02:23:12.239Z">
 <meta property="article:author" content="ningli">
+<meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1996,7 +1997,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1713687288982),
+    lastupdate: new Date(1713752615838),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2473,56 +2474,53 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 线条边角的样式、 AlignVertexCenters —— 锐化垂直线和水平线</p>
 <p>线条属性的默认值为：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">([<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>], <span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;0.5&#x27;</span>, <span class="string">&#x27;round&#x27;</span>,<span class="string">&#x27;off&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="一线条颜色">一、线条颜色</h3>
+<h3 id="线条颜色">1.线条颜色</h3>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;">选项</th>
+<th style="text-align: center;">颜色</th>
 <th style="text-align: center;">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">'red'或'r'</td>
-<td style="text-align: center;">红色</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">‘green’或‘g’</td>
-<td style="text-align: center;">绿色</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">‘blue’或'b'</td>
-<td style="text-align: center;">蓝色</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">‘yellow’或'y'</td>
+<td style="text-align: center;"><code>y</code></td>
 <td style="text-align: center;">黄色</td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">‘magenta’或‘m’</td>
+<tr class="even">
+<td style="text-align: center;"><code>m</code></td>
 <td style="text-align: center;">品红色</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">‘cyan’或'c'</td>
+<tr class="odd">
+<td style="text-align: center;"><code>c</code></td>
 <td style="text-align: center;">青蓝色</td>
 </tr>
+<tr class="even">
+<td style="text-align: center;"><code>r</code></td>
+<td style="text-align: center;">红色</td>
+</tr>
 <tr class="odd">
-<td style="text-align: center;">‘white’或'w'</td>
+<td style="text-align: center;"><code>g</code></td>
+<td style="text-align: center;">绿色</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>b</code></td>
+<td style="text-align: center;">蓝色</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>w</code></td>
 <td style="text-align: center;">白色</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">'black'或‘k’</td>
+<td style="text-align: center;"><code>k</code></td>
 <td style="text-align: center;">黑色</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">‘none’</td>
-<td style="text-align: center;">无颜色</td>
 </tr>
 </tbody>
 </table>
-<h3 id="二线条宽度">二、线条宽度</h3>
+<h3 id="线条宽度">2.线条宽度</h3>
 <p>​ 线条宽度的默认值为 0.5，线条宽度只能指定正值。</p>
-<h3 id="三线条类型">三、线条类型</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(x, y,<span class="string">&#x27;r--o&#x27;</span>, x, y1,<span class="string">&#x27;b-&#x27;</span>, x, y2, <span class="string">&#x27;k--&#x27;</span>, <span class="string">&#x27;linewidth&#x27;</span>, <span class="number">1.5</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="线条类型">3.线条类型</h3>
 <table>
 <thead>
 <tr class="header">
@@ -2549,9 +2547,71 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody>
 </table>
-<p><img src="https://pic.imgdb.cn/item/66013bb69f345e8d0337f980.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/66013bb69f345e8d0337f980.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="zoom: 90%;" /></p>
+<p><strong>标记：</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">标记</th>
+<th style="text-align: center;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>o</code></td>
+<td style="text-align: center;">圆圈</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>+</code></td>
+<td style="text-align: center;">加号</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>*</code></td>
+<td style="text-align: center;">星号</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>.</code></td>
+<td style="text-align: center;">点</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>x</code></td>
+<td style="text-align: center;">叉号</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>s</code></td>
+<td style="text-align: center;">方形</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>d</code></td>
+<td style="text-align: center;">菱形</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>^</code></td>
+<td style="text-align: center;">上三角</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>v</code></td>
+<td style="text-align: center;">下三角</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&gt;</code></td>
+<td style="text-align: center;">右三角</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;</code></td>
+<td style="text-align: center;">左三角</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>p</code></td>
+<td style="text-align: center;">五角形</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>h</code></td>
+<td style="text-align: center;">六角形</td>
+</tr>
+</tbody>
+</table>
 <p>实例：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(t, <span class="built_in">sin</span>(t-<span class="built_in">pi</span>/<span class="number">2</span>),<span class="string">&#x27;--mo&#x27;</span>) <span class="comment">% 虚线，品红色，圆圈</span></span><br><span class="line"><span class="built_in">plot</span>(t, <span class="built_in">sin</span>(t-<span class="built_in">pi</span>), <span class="string">&#x27;:bs&#x27;</span>) <span class="comment">% 点线，蓝色，s表示square方形</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(t, <span class="built_in">sin</span>(t-<span class="built_in">pi</span>/<span class="number">2</span>),<span class="string">&#x27;--mo&#x27;</span>)  <span class="comment">% 虚线，品红色，圆圈</span></span><br><span class="line"><span class="built_in">plot</span>(t, <span class="built_in">sin</span>(t-<span class="built_in">pi</span>), <span class="string">&#x27;:bs&#x27;</span>)  <span class="comment">% 点线，蓝色，s表示square方形</span></span><br></pre></td></tr></table></figure>
 <p>上面两个例子，参数3的顺序可以任意的，比如mo-- ,m--o等</p>
 <p>注意：</p>
 <ul>
@@ -2562,22 +2622,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p><strong>如何设置线条宽度：</strong></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">plot</span>(t,<span class="built_in">sin</span>(t-<span class="built_in">pi</span>),<span class="string">&#x27;:bs&#x27;</span>，‘LineWidth’,<span class="number">5</span>)</span><br><span class="line"><span class="built_in">plot</span>(t,y,<span class="string">&#x27;-bs&#x27;</span>,<span class="string">&#x27;LineWidth&#x27;</span>,<span class="number">2</span>,... <span class="comment">%设置线的宽度为2</span></span><br><span class="line"><span class="string">&#x27;MarkerEdgeColor&#x27;</span>,<span class="string">&#x27;k&#x27;</span>,... <span class="comment">%设置标记点边缘颜色为黑色   及时和边角样式</span></span><br><span class="line"><span class="string">&#x27;MarkerFaceColor&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,... <span class="comment">%设置标记点填充颜色为黄色</span></span><br><span class="line"><span class="string">&#x27;MarkerSize&#x27;</span>,<span class="number">10</span>) <span class="comment">%设置标记点的尺寸为10</span></span><br></pre></td></tr></table></figure>
-<h3 id="matlab特殊字符的显示">Matlab特殊字符的显示</h3>
+<h3 id="图例">4.图例</h3>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">legend</span>(<span class="string">&#x27;MLFMA&#x27;</span>, <span class="string">&#x27;O(NlogN)&#x27;</span>, <span class="string">&#x27;O(N^2)&#x27;</span>, <span class="string">&#x27;Location&#x27;</span>,<span class="string">&#x27;northwest&#x27;</span>);</span><br><span class="line"><span class="built_in">legend</span> boxoff;  <span class="comment">% 图例不加框</span></span><br></pre></td></tr></table></figure>
+<h3 id="matlab特殊字符的显示">5.Matlab特殊字符的显示</h3>
 <p>关于matlab中特殊字符, 上标和下标</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x27;T=25\circC&#x27;，(摄氏度)</span><br><span class="line">下标用 _(下划线)</span><br><span class="line">上标用^ （尖号）</span><br></pre></td></tr></table></figure>
 <p>希腊字母等特殊字符：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">α \alpha</span><br><span class="line">β \beta</span><br><span class="line">γ \gamma</span><br><span class="line">θ \theta</span><br><span class="line">Θ \Theta</span><br><span class="line">Г \Gamma</span><br><span class="line">δ \delta</span><br><span class="line">Δ \Delta</span><br><span class="line">ξ \xi</span><br><span class="line">Ξ \Xi</span><br><span class="line">η \elta</span><br><span class="line">ε \epsilon</span><br><span class="line">ζ \zeta</span><br><span class="line">μ \miu</span><br><span class="line">υ \nu</span><br><span class="line">τ \tau</span><br><span class="line">λ \lamda</span><br><span class="line">Λ \Lamda</span><br><span class="line">π \pi</span><br><span class="line">Π \Pi</span><br><span class="line">σ \sigma</span><br><span class="line">Σ \Sigma</span><br><span class="line">φ \phi</span><br><span class="line">Φ \Phi</span><br><span class="line">ψ \psi</span><br><span class="line">Ψ \Psi</span><br><span class="line">χ \chi</span><br><span class="line">ω \ommiga</span><br><span class="line">Ω \Ommiga</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt; \leq</span><br><span class="line">&gt; \geq</span><br><span class="line">不等于 \neq</span><br><span class="line">&lt;&lt; \ll</span><br><span class="line">&gt;&gt; \gg</span><br><span class="line">正负 \pm</span><br><span class="line">左箭头 \leftarrow</span><br><span class="line">右箭头 \rightarrow</span><br><span class="line">上箭头 \uparrow</span><br><span class="line">上圆圈（度数） \circ</span><br><span class="line">例 text(2,3,&#x27;\alpha_2^\beta&#x27;)</span><br><span class="line">注： 可用&#123;&#125;把须放在一起的括起来</span><br><span class="line">^&#123;supeerstring&#125;——进行上标文本的注释</span><br><span class="line">_&#123;substring&#125;——进行下标文本的注释</span><br><span class="line">\bf：加粗字体</span><br><span class="line">\it：斜字体</span><br><span class="line">\sl：斜字体</span><br><span class="line">\rm：正常字体</span><br><span class="line">\fontname&#123;fontname&#125;：定义使用特殊的字体名称</span><br><span class="line">\fontsize&#123;fontsize&#125;：定义使用特殊的字体大小</span><br></pre></td></tr></table></figure>
-<h3 id="paper图片要求">Paper图片要求</h3>
+<h3 id="paper图片要求">5.Paper图片要求</h3>
 <p>RCS曲线要求</p>
 <ul>
 <li><p>采用颜色：<code>红、蓝、黄、绿</code></p></li>
 <li><p>采用线性：实线、虚线、点划线、双点划线</p></li>
 <li><p>注明图例（不加框），整幅图需要加框</p></li>
-<li><p>图中数字和英文字体为Times New Roman</p></li>
+<li><p>图中数字和英文字体为<code>Times New Roman</code></p></li>
 <li><p>注意坐标轴变量取值范围，theta取值范围为[0,180]或[-90,90]，phi取值范围为[0,360]</p></li>
 </ul>
-<p>从matlab导出图片采用600的分辨率导出，并保留<code>.fig</code>源文件</p>
+<p>从matlab导出图片采用<strong>600</strong>的分辨率导出，并保留<code>.fig</code>源文件</p>
 <p>插入Visio时可先复制到PPT后再次复制插入，可以保证图片的清晰度</p>
 
   </div>
@@ -2603,10 +2665,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-13T17:16:30+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-22T10:23:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年4月13日</p>
+    <p>更新于：2024年4月22日</p>
   </a>
 </div>
 
@@ -2614,6 +2676,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/matlab/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>matlab</p></a></div>
+  <span hidden itemprop="keywords">matlab</span>
+  
+
 
         
       
@@ -2767,7 +2836,7 @@ https://www.bilibili.com/video/BV1H2421K7YV/?spm_id_from=333.999.0.0&amp...</p>
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BA%BF%E6%9D%A1%E9%A2%9C%E8%89%B2"><span class="toc-text">一、线条颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BA%BF%E6%9D%A1%E5%AE%BD%E5%BA%A6"><span class="toc-text">二、线条宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%BA%BF%E6%9D%A1%E7%B1%BB%E5%9E%8B"><span class="toc-text">三、线条类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matlab%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E7%9A%84%E6%98%BE%E7%A4%BA"><span class="toc-text">Matlab特殊字符的显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#paper%E5%9B%BE%E7%89%87%E8%A6%81%E6%B1%82"><span class="toc-text">Paper图片要求</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%9D%A1%E9%A2%9C%E8%89%B2"><span class="toc-text">1.线条颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%9D%A1%E5%AE%BD%E5%BA%A6"><span class="toc-text">2.线条宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%9D%A1%E7%B1%BB%E5%9E%8B"><span class="toc-text">3.线条类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%BE%8B"><span class="toc-text">4.图例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#matlab%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E7%9A%84%E6%98%BE%E7%A4%BA"><span class="toc-text">5.Matlab特殊字符的显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#paper%E5%9B%BE%E7%89%87%E8%A6%81%E6%B1%82"><span class="toc-text">5.Paper图片要求</span></a></li></ol>
   </div>
 </section>
 
@@ -3277,7 +3346,7 @@ target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"NingLi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/research-grocery/","name":"research grocery"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/25/Matlab画图-线条颜色、宽度等相关设置/","name":"Matlab画图 线条颜色、宽度等相关设置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"NingLi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Matlab画图 线条颜色、宽度等相关设置","description":"","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/25/Matlab%E7%94%BB%E5%9B%BE-%E7%BA%BF%E6%9D%A1%E9%A2%9C%E8%89%B2%E3%80%81%E5%AE%BD%E5%BA%A6%E7%AD%89%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/"},"author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"NingLi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/25/Matlab%E7%94%BB%E5%9B%BE-%E7%BA%BF%E6%9D%A1%E9%A2%9C%E8%89%B2%E3%80%81%E5%AE%BD%E5%BA%A6%E7%AD%89%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/","wordCount":0,"datePublished":"2024-03-25T08:46:22.000Z","dateModified":"2024-04-13T09:16:30.803Z","articleSection":"research grocery","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"NingLi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/research-grocery/","name":"research grocery"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/25/Matlab画图-线条颜色、宽度等相关设置/","name":"Matlab画图 线条颜色、宽度等相关设置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"NingLi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"NingLi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Matlab画图 线条颜色、宽度等相关设置","description":"","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/25/Matlab%E7%94%BB%E5%9B%BE-%E7%BA%BF%E6%9D%A1%E9%A2%9C%E8%89%B2%E3%80%81%E5%AE%BD%E5%BA%A6%E7%AD%89%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/"},"author":{"@type":"Person","name":"ningli","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"NingLi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/25/Matlab%E7%94%BB%E5%9B%BE-%E7%BA%BF%E6%9D%A1%E9%A2%9C%E8%89%B2%E3%80%81%E5%AE%BD%E5%BA%A6%E7%AD%89%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/","wordCount":0,"datePublished":"2024-03-25T08:46:22.000Z","dateModified":"2024-04-22T02:23:12.239Z","articleSection":"research grocery","keywords":"matlab","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
